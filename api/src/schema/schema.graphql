@@ -1,0 +1,19 @@
+type Query {
+  people(page: Int, url: String): People
+}
+
+type Person {
+  name: String!
+  height: String!
+  mass: String!
+  gender: String!
+  homeworld: String,
+}
+
+type People {
+  results: [Person]!
+  count: Int!
+  next: String
+  prev: String
+  page: Int
+}
