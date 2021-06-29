@@ -17,9 +17,9 @@ const server = new ApolloServer({
 app.use(cors());
 app.use(compression());
 
-server.applyMiddleware({ app, path: '/' });
+server.applyMiddleware({ app, path: '/graphql' });
 
-const port = process.env.port || 8000
+const port = process.env.PORT || 8000
 
 app.listen(
   port,
