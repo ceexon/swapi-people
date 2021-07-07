@@ -17,11 +17,11 @@ const server = new ApolloServer({
 app.use(cors());
 app.use(compression());
 
-server.applyMiddleware({ app, path: '/graphql' });
+server.applyMiddleware({ app, path: '/' });
 
-const port = process.env.port || 8000
+const port = process.env.PORT || 8000
 
 app.listen(
   port,
-  (): void => console.log('\n🚀      Server is now running on http://localhost:%d/graphql', port)
+  (): void => console.log('\n🚀      Server is now running on http://localhost:%d/', port)
 );
