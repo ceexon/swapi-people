@@ -4,6 +4,6 @@ import {
 } from '@apollo/client'
 
 export const client = new ApolloClient({
-  uri: 'http://localhost:8000/graphql',
+  uri: 'https://swapi-gpl.herokuapp.com/graphql',
   cache: new InMemoryCache(),
 })
